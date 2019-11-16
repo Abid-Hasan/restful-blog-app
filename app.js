@@ -4,7 +4,7 @@ var express           = require("express"),
     mongoose          = require("mongoose"),
     methodOverride    = require("method-override"),
     expressSanitizer  = require("express-sanitizer"),
-    PORT              = process.env.PORT || 3000;;
+    PORT              = process.env.PORT || 3000;
 
 // app config
 mongoose.connect(process.env.RESTFULBLOGAPPDATABASE, {useNewUrlParser: true});
