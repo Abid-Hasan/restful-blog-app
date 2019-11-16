@@ -3,7 +3,7 @@ var express           = require("express"),
     bodyParser        = require("body-parser"),
     mongoose          = require("mongoose"),
     methodOverride    = require("method-override"),
-    expressSanitizer  = require("express-sanitizer")
+    expressSanitizer  = require("express-sanitizer"),
     PORT              = process.env.PORT || 3000;;
 
 // app config
