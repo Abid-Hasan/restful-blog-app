@@ -7,9 +7,6 @@ var express           = require("express"),
     PORT              = process.env.PORT || 3000;;
 
 // app config
-
-// mongoose.connect("mongodb://localhost:27017/restful_blog_app", {useNewUrlParser: true});
-// mongoose.connect("mongodb+srv://Potato:357159@blogcluster-ynijw.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true});
 mongoose.connect(process.env.RESTFULBLOGAPPDATABASE, {useNewUrlParser: true});
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -18,7 +15,6 @@ app.use(expressSanitizer());
 app.use(methodOverride("_method"));
 
 // mongoose model config
-
 var blogSchema = new mongoose.Schema({
   title: String,
   image: String,
@@ -27,7 +23,10 @@ var blogSchema = new mongoose.Schema({
 });
 var Blog = mongoose.model("Blog", blogSchema);
 
-// RESTful routes
+
+////////////////////
+// RESTful routes //
+////////////////////
 
 // root
 app.get("/", function(req, res) {
